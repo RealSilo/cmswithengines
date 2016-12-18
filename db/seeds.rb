@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Samurai::User.create(email: 'test@gmail.com', password: '12341234', admin: false)
+Samurai::User.create(email: 'admin@gmail.com', password: '12341234', admin: true)
