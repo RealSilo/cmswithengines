@@ -2,8 +2,7 @@ require_dependency "samurai/application_controller"
 
 module Samurai
   module Contacts
-    class ContactsController < ApplicationController
-      before_action :authenticate_user!
+    class ContactsController < Samurai::Contacts::ApplicationController
       before_action :set_and_authorize_contact, only: [:show, :edit, :update, :destroy]
 
       def index

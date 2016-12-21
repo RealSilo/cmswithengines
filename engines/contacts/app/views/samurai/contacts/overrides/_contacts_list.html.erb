@@ -11,10 +11,11 @@
        <th>Created On</th>
       </thead>
       <tbody>
-        <%- @contacts.each do |contact| %> <tr>
-          <td><%= contact.id %></td>
-          <td><%= contact.first_name %> <%= contact.first_name %></td> <td><%= contact.email %></td>
-          <td><%= contact.created_at.strftime("%d %b. %Y") %></td>
+        <%- @contacts.each do |contact| %>
+          <tr>
+            <td><%= contact.id %></td>
+            <td><%= contact.first_name %> <%= contact.first_name %></td> <td><%= contact.email %></td>
+            <td><%= contact.created_at.strftime("%d %b. %Y") %></td>
           </tr>
         <% end %>
       </tbody>

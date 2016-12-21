@@ -1,7 +1,19 @@
 module Samurai
   module Contacts
-    class ContactPolicy < ApplicationPolicy
+    class ContactPolicy < Samurai::Contacts::ApplicationPolicy
       def show?
+        user.admin? || user == record.user
+      end
+
+      def create?
+        user.admin? || user == record.user
+      end
+
+      def update?
+        user.admin? || user == record.user
+      end
+
+      def destroy?
         user.admin? || user == record.user
       end
     end
